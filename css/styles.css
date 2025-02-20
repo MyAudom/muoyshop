@@ -10972,6 +10972,31 @@ li .nav-link{
   }
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .items_loader {
+      font-size: 24px; /* Smaller font size for tablets */
+      height: 30px; /* Adjust height */
+      padding: 8px; /* Reduce padding */
+  }
+
+  .word {
+      padding-left: 4px; /* Adjust spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .items_loader {
+      font-size: 18px; /* Even smaller font size for mobile phones */
+      height: 25px;
+      padding: 5px;
+  }
+
+  .word {
+      padding-left: 3px;
+  }
+}
+
 /* social-links */
 .social-links,.flex-center {
   display: flex;
