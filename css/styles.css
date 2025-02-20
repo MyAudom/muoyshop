@@ -11097,3 +11097,51 @@ li .nav-link{
 #github {
   fill: #333;
 }
+
+/* Base styles */
+.product-card {
+    text-align: left; /* Default alignment */
+}
+
+.product-card h5 {
+    font-size: 1.5rem; /* Default size for larger screens (24px) */
+    margin-bottom: 0.5rem;
+}
+
+.product-card h6 {
+    font-size: 1rem; /* Default size for larger screens (16px) */
+    margin-bottom: 0.5rem;
+}
+
+.product-card span {
+    font-size: 1.25rem; /* Default size for larger screens (20px) */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .product-card h5 {
+        font-size: 1.25rem; /* Reduce to 20px for tablets */
+    }
+
+    .product-card h6 {
+        font-size: 0.875rem; /* Reduce to 14px */
+    }
+
+    .product-card span {
+        font-size: 1rem; /* Reduce to 16px */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card h5 {
+        font-size: 1rem; /* Reduce to 16px for phones */
+    }
+
+    .product-card h6 {
+        font-size: 0.75rem; /* Reduce to 12px */
+    }
+
+    .product-card span {
+        font-size: 0.875rem; /* Reduce to 14px */
+    }
+}
