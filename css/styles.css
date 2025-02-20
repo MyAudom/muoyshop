@@ -4231,7 +4231,12 @@ li .nav-link{
 @media (max-width: 480px) {
   .section-title {
       font-size: 14px; /* Further reduce font size for phones */
-      top: 40px; /* Adjust sticky position for smaller screens */
+      top: 80px; /* Adjust sticky position for smaller screens */
+      font-weight: bold;
+      position: relative;
+      position: sticky;
+      top: 80px;
+      z-index: 999;
   }
 
   .section-title::before,
