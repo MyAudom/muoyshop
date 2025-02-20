@@ -4209,6 +4209,11 @@ li .nav-link{
   .section-title {
       font-size: 16px; /* Reduce font size for tablets */
       top: 80px; /* Slightly adjust sticky position */
+      font-weight: bold;
+      position: relative;
+      position: sticky;
+      top: 80px;
+      z-index: 999;
   }
 
   .section-title::before,
