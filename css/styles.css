@@ -4163,15 +4163,14 @@ li .nav-link{
 }
 
 
-/* From Uiverse.io by akshat-patel28 */ 
 .section-title {
   text-align: center;
-  font-size: 20px;
+  font-size: 20px; /* Default size for larger screens */
   font-weight: bold;
   position: relative;
   margin: 20px 0;
   position: sticky;
-  top:80px;
+  top: 80px;
   z-index: 999;
 }
 
@@ -4179,7 +4178,7 @@ li .nav-link{
 .section-title::after {
   content: "";
   display: block;
-  width: 40%;
+  width: 40%; /* Default width */
   height: 2px;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -4198,13 +4197,49 @@ li .nav-link{
 
 .section-title span {
   display: inline-block;
-  padding: 0 100px;
+  padding: 0 100px; /* Default padding */
   background: rgb(184, 132, 132);
   position: relative;
   z-index: 1;
   border-radius: 15px;
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 16px; /* Reduce font size for tablets */
+      top: 80px; /* Slightly adjust sticky position */
+  }
+
+  .section-title::before,
+  .section-title::after {
+      width: 35%; /* Reduce width of lines */
+      height: 1.5px; /* Slightly thinner lines */
+  }
+
+  .section-title span {
+      padding: 0 60px; /* Reduce padding */
+      border-radius: 12px; /* Slightly smaller radius */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+      font-size: 14px; /* Further reduce font size for phones */
+      top: 40px; /* Adjust sticky position for smaller screens */
+  }
+
+  .section-title::before,
+  .section-title::after {
+      width: 30%; /* Further reduce width */
+      height: 1px; /* Thinner lines */
+  }
+
+  .section-title span {
+      padding: 0 40px; /* Further reduce padding */
+      border-radius: 10px; /* Even smaller radius */
+  }
+}
 /*  */
 .card {
   --bs-card-spacer-y: 1rem;
