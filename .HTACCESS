@@ -2,3 +2,6 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\.html$
 RewriteRule ^(.*)$ $1.html [L]
+
+errorDOCUMENT 404 https://muoyshop.netlify.app/404.html
+errorDOCUMENT 404 https://myaudom.github.io/muoyshop/404.html
