@@ -73,6 +73,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+
 // ទប់ស្កាត់ការ Right Click
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
