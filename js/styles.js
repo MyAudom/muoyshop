@@ -72,3 +72,31 @@ document.querySelectorAll('.nav-link').forEach(link => {
         history.pushState({}, document.title, cleanUrl);
     });
 });
+
+// ទប់ស្កាត់ការ Right Click
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// ទប់ស្កាត់ការ Shortcut ដូចជា F12, Ctrl+Shift+I, Ctrl+U
+document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // F12
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+        return false;
+    }
+};
+
+// ពិនិត្យបើ Inspect ត្រូវបានបើក
+(function() {
+    let devtools = /./;
+    devtools.toString = function() {
+        alert('សូមកុំបើក Developer Tools!');
+        window.location.reload();
+    }
+    console.log('%c', devtools);
+})();
