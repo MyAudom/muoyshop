@@ -95,7 +95,6 @@ document.onkeydown = function(e) {
 (function() {
     let devtools = /./;
     devtools.toString = function() {
-        alert('សូមកុំបើក Developer Tools!');
         window.location.reload();
     }
     console.log('%c', devtools);
