@@ -91,11 +91,3 @@ document.onkeydown = function(e) {
     }
 };
 
-// ពិនិត្យបើ Inspect ត្រូវបានបើក
-(function() {
-    let devtools = /./;
-    devtools.toString = function() {
-        window.location.reload();
-    }
-    console.log('%c', devtools);
-})();
