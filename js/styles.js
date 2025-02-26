@@ -92,3 +92,23 @@ document.onkeydown = function(e) {
     }
 };
 
+/* Dark mode */
+function toggleTheme() {
+    const body = document.body;
+    const checkbox = document.querySelector('.input');
+    
+    if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+    }
+}
+
+// Check for user's preferred color scheme on load
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+    document.querySelector('.input').checked = true;
+}
